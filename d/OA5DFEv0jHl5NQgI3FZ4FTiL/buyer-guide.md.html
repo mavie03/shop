@@ -1,0 +1,51 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>buyer-guide.md | Malachi Smith</title><meta name="description" content="">
+<meta name="robots" content="noindex">
+<style>:root{--bg:#fffaf5;--text:#1f1720;--muted:#6b5f6e;--brand:#ff2e93;--card:#fff;--border:#eadde5}
+@media (prefers-color-scheme:dark){:root{--bg:#120d14;--text:#f6eef8;--muted:#a898b0;--card:#1c151f;--border:#30263a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main,header,footer{max-width:760px;margin:0 auto;padding:16px}header a{color:var(--text);text-decoration:none;font-weight:700}
+a{color:var(--brand)}h1{line-height:1.2}.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin:14px 0}
+.price{font-size:1.4rem;font-weight:700}.buy{display:inline-block;background:var(--brand);color:#fff;padding:12px 22px;border-radius:999px;
+text-decoration:none;font-weight:700}.muted{color:var(--muted)}footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--border);margin-top:32px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}code{background:var(--border);padding:0 4px;border-radius:4px}</style></head><body>
+<header><a href="https://mavie03.github.io/shop/">Malachi Smith</a></header><main><h2>Size Your 12V Power System: A Plain Guide for Australian Caravans, Camper Trailers and 4WDs</h2>
+<p><strong>General information only. Not electrical design or installation advice.</strong> Have your final design and install checked by a licensed auto-electrician. Anything 240V or mains needs a licensed electrician. All figures are estimates. Prices are not quotes.</p>
+<p>This guide comes with a calculator (power-budget-calculator.html). Open it in any browser. It works offline.</p>
+<p>---</p>
+<h3>1. The five numbers you need</h3>
+<ul><li><strong>Daily energy use (Wh).</strong> What your gear uses in 24 hours.</li><li><strong>Battery size (Ah).</strong> How much you can store.</li><li><strong>Solar (W).</strong> How much you can put back on a bad-ish day.</li><li><strong>DC-DC charger (A).</strong> How fast the tow vehicle tops up the battery.</li><li><strong>A parts list.</strong> So you can shop around.</li></ul>
+<h3>2. Step 1: list your loads</h3>
+<p>For each device: watts x quantity x hours per day = Wh per day.</p>
+<ul><li>Check the label or manual for watts.</li><li>A compressor fridge doesn&#x27;t run all day. It cycles. Use the maker&#x27;s Wh/day figure if there is one, and add a margin for hot weather. In the Australian outback the fridge is usually the biggest load.</li><li>Add phones, lights, pump, fans, laptop, router or Starlink.</li><li>Add a 15% margin for losses and guesswork. The calculator does this.</li></ul>
+<h3>3. Step 2: battery</h3>
+<p>Battery Ah = daily Wh x days of autonomy / (usable fraction x battery volts).</p>
+<ul><li>Lithium (LiFePO4): about 80% usable, 12.8 V.</li><li>AGM/lead-acid: about 50% usable, so roughly double the Ah for the same result.</li><li>Autonomy is how many days you want to run without sun or driving. 1.5 days is a sensible start. Stay somewhere shady for longer? Use 2-3.</li></ul>
+<p>Take the next size up that you can buy.</p>
+<h3>4. Step 3: solar</h3>
+<p>Solar W = daily Wh / (peak sun hours x system efficiency).</p>
+<ul><li>Peak sun hours are the sun-equivalent hours per day. Use a <strong>winter-low</strong> figure for where you&#x27;ll travel, so the system works in your worst month, not your best.</li><li>Allow about 75% efficiency for heat, dust, cables, shade and a flat panel.</li><li><strong>About the calculator&#x27;s regional figures:</strong> they are long-term NASA POWER averages (satellite-derived, all-sky, flat panel) for the darkest month of each season, rounded down a little. For Alice Springs the figure also agrees with Bureau of Meteorology data. Real days vary with cloud, dust, shade and panel tilt, so leave margin. In the tropical wet season, storm runs are far darker than the average, so add autonomy days.</li><li><strong>To look up another place:</strong> go to power.larc.nasa.gov and read the long-term monthly solar value in kWh/m2/day for your darkest month. That equals peak sun hours. If you only have a BoM figure in MJ/m2 per day, divide by 3.6. Type the result into the calculator&#x27;s custom box.</li></ul>
+<h3>5. Step 4: DC-DC charger</h3>
+<ul><li>Most modern tow vehicles have smart or variable-voltage alternators. A plain battery link doesn&#x27;t charge properly from them. A DC-DC charger fixes that.</li><li>A starting size is 0.2-0.5 x battery Ah in amps. 0.3 is typical. Choose the next standard size at or above that. Check your alternator&#x27;s rating and the charger&#x27;s specs.</li><li>A DC-DC with built-in MPPT can replace a separate solar regulator.</li></ul>
+<h3>6. Step 5: cables, fuses, wiring: take it to a professional</h3>
+<p>This guide gives <strong>no cable sizes or fuse ratings</strong>. They depend on run length, mounting and equipment, and a wrong choice can cause a fire. Ask your licensed auto-electrician. Fuse or breaker near each source and the battery.</p>
+<h3>7. Worked example</h3>
+<p>A couple in a dual-cab 4WD towing a camper trailer. These are the calculator&#x27;s default loads: a 60 L fridge, three LED lights, two phones, and a fan. The region is Central Australia in winter (4.0 peak sun hours). All figures are estimates from assumed numbers.</p>
+<p>| Item | Figure | |---|---| | Daily use | 770 Wh | | With 15% margin | about 885 Wh | | Battery (1.5 days, lithium 80%, 12.8 V) | 885 x 1.5 / 10.24 = about 130 Ah. The next common size up is 135 Ah | | Solar (4.0 sun hours, 75%) | 885 / 3.0 = about 295 W, so 300 W | | DC-DC (0.3 x 130 Ah) | about 39 A, so a 40 A unit |</p>
+<p><strong>Rough parts list (A$, estimates, not quotes):</strong></p>
+<p>| Item | Estimate | |---|---| | 135 Ah LiFePO4 battery with BMS | 550-900 | | 40 A DC-DC charger | 300-450 | | 300 W solar | 300-700 | | Separate MPPT regulator (skip if DC-DC has MPPT) | 100-200 | | Cable, lugs, fuses, plugs | 150-300 | | Fuse/distribution block | 60-150 | | Battery monitor | 50-150 | | <strong>Total with separate regulator</strong> | <strong>about 1,510-2,850</strong> | | <strong>Total without</strong> | <strong>about 1,410-2,650</strong> |</p>
+<p>These price ranges are the maker&#x27;s unsourced guesses. Installation is extra.</p>
+<h3>8. Australian conditions</h3>
+<ul><li><strong>Heat:</strong> fridges use more power. Keep batteries ventilated and out of direct sun.</li><li><strong>Cold:</strong> lithium shouldn&#x27;t be charged below freezing. Check your battery&#x27;s spec.</li><li><strong>Dust and corrugations:</strong> secure mounts, sealed connections.</li><li><strong>Shade:</strong> add panel capacity or use a portable panel you can move.</li><li><strong>Sun figures:</strong> cloud and dust reduce output. Leave margin.</li></ul>
+<h3>9. Common mistakes</h3>
+<ul><li>Using the fridge&#x27;s label watts instead of average daily use.</li><li>Sizing solar for summer, then camping in July.</li><li>Buying a bigger battery without a charger to fill it.</li><li>Skipping the DC-DC on a smart-alternator vehicle.</li><li>Guessing cable and fuse sizes.</li></ul>
+<h3>10. Before you buy</h3>
+<ul><li>[ ] Loads listed with real watts</li><li>[ ] Winter-low sun figure for your route checked</li><li>[ ] Alternator type and rating checked</li><li>[ ] Panels fit your roof or camp setup</li><li>[ ] Plan reviewed by a licensed auto-electrician</li><li>[ ] Prices compared across several retailers</li></ul>
+<p>---</p>
+<p><strong>Disclaimer:</strong> General information only. Not electrical design or installation advice. Sizing is an estimate from the figures you enter. A licensed auto-electrician should check the final design and installation. 240V/mains work must be done by a licensed electrician. This guide was written with AI assistance and tested and reviewed before sale.</p>
+<p><strong>30-day money-back guarantee:</strong> If this kit isn&#x27;t useful, email the seller within 30 days of purchase for a full refund. This is in addition to your rights under the Australian Consumer Law.</p>
+<p><strong>Consumer guarantees:</strong> Our goods come with guarantees that cannot be excluded under the Australian Consumer Law. You are entitled to a replacement or refund for a major failure and compensation for any other reasonably foreseeable loss or damage. You are also entitled to have the goods repaired or replaced if the goods fail to be of acceptable quality and the failure does not amount to a major failure.</p>
+<p><strong>Seller:</strong> Malachi Smith (sole trader), Alice Springs NT. Contact: adminapexinventions@gmail.com.</p></main>
+<footer><p>Malachi Smith, Alice Springs, Australia. Questions: <a href="mailto:adminapexinventions@gmail.com">adminapexinventions@gmail.com</a>.
+<a href="https://mavie03.github.io/shop/refunds/">Refunds</a> · <a href="https://mavie03.github.io/shop/terms/">Terms</a> ·
+<a href="https://mavie03.github.io/shop/privacy/">Privacy</a>. Prices in AUD. Made with care, with help from AI tools.</p></footer></body></html>
