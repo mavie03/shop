@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>12V Power Budget Calculator (Australia)</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;max-width:860px;margin:0 auto;padding:16px;color:#222;line-height:1.45}
+h1{font-size:1.5em;margin-bottom:4px}h2{font-size:1.15em;margin-top:24px;border-bottom:2px solid #c2541b;padding-bottom:3px}
+table{border-collapse:collapse;width:100%;min-width:560px}th,td{border:1px solid #ccc;padding:5px;text-align:left;font-size:.92em}
+th{background:#f3e6dc}input,select{padding:5px;font-size:1em;max-width:100%}td input{width:90%;min-width:60px}td:first-child input{min-width:150px}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+button{padding:7px 12px;margin:3px 3px 3px 0;border:1px solid #888;background:#f7f7f7;border-radius:4px;cursor:pointer}
+.row{display:flex;flex-wrap:wrap;gap:14px}.row label{display:flex;flex-direction:column;font-size:.9em;min-width:170px}
+.res{background:#fff6ee;border:2px solid #c2541b;padding:10px 14px;border-radius:6px}
+.res b{font-size:1.15em}.warn{background:#fff3cd;border:1px solid #e0c36a;padding:8px 12px;border-radius:5px;font-size:.9em}
+.small{font-size:.85em;color:#555}
+@media print{button,.noprint{display:none}}
+</style>
+</head>
+<body>
+<h1>12V Power Budget Calculator</h1>
+<p class="small">For caravans, camper trailers and 4WDs in Australia. Works offline. Nothing you type leaves your device.</p>
+<div class="warn"><b>General information only.</b> This is a planning estimate, not electrical design or installation advice. Have your final design and install checked by a licensed auto-electrician. Anything 240V/mains needs a licensed electrician. Prices and sun figures are estimates.</div>
+
+<h2>1. Your loads</h2>
+<p class="small">Add each device. Watts x quantity x hours per day = Wh per day. For a fridge, enter its average Wh/day from the spec sheet if you have it (use the Fridge button, then edit). Hot weather uses more.</p>
+<div class="noprint">
+<button onclick="add('60 L fridge/freezer (hot weather)',55,1,10)">+ Fridge 60 L</button>
+<button onclick="add('90 L fridge/freezer (hot weather)',65,1,11)">+ Fridge 90 L</button>
+<button onclick="add('LED light',5,3,4)">+ LED lights</button>
+<button onclick="add('Water pump',60,1,0.25)">+ Water pump</button>
+<button onclick="add('Compressor (tyre inflator)',150,1,0.1)">+ Tyre compressor</button>
+<button onclick="add('12V fan',20,1,5)">+ Fan</button>
+<button onclick="add('Phone/tablet charging',15,2,2)">+ Phones</button>
+<button onclick="add('Laptop charging',60,1,2)">+ Laptop</button>
+<button onclick="add('Starlink (12V supply est.)',50,1,8)">+ Starlink</button>
+<button onclick="add('Other',10,1,1)">+ Blank</button>
+</div>
+<div class="scroll">
+<table id="loads"><thead><tr><th>Load</th><th>Watts</th><th>Qty</th><th>Hours/day (running)</th><th>Wh/day</th><th></th></tr></thead><tbody></tbody></table>
+</div>
+<p class="small">Preset hours for the fridge (10 h of running in 24) are estimates. Real use depends on the model, temperature and packing. Presets are rough guesses: replace them with your own figures. On a small phone, swipe the table sideways.</p>
+
+<h2>2. Your setup</h2>
+<div class="row">
+<label>Region and season (peak sun hours)
+<select id="region" onchange="regionChange()"></select></label>
+<label>Peak sun hours per day
+<input id="sun" type="number" step="0.1" min="0.5" max="8" value="4.0" oninput="calc()"></label>
+<label>Battery type
+<select id="chem" onchange="calc()"><option value="0.8">Lithium (LiFePO4), 80% usable</option><option value="0.5">AGM/lead-acid, 50% usable</option></select></label>
+<label>Days without sun/driving (autonomy)
+<input id="days" type="number" step="0.5" min="0.5" max="7" value="1.5" oninput="calc()"></label>
+<label>Load safety margin (%)
+<input id="margin" type="number" min="0" max="50" value="15" oninput="calc()"></label>
+<label>Solar system efficiency (%)
+<input id="eff" type="number" min="50" max="95" value="75" oninput="calc()"></label>
+<label>Battery nominal volts
+<input id="volts" type="number" step="0.1" value="12.8" oninput="calc()"></label>
+<label>Charge rate from vehicle (fraction of battery Ah)
+<select id="crate" onchange="calc()"><option value="0.2">0.2C (gentle, lead-acid/long life)</option><option value="0.3" selected>0.3C (typical)</option><option value="0.5">0.5C (fast)</option></select></label>
+</div>
+<p class="small" id="sunnote"></p>
+
+<h2>3. Results (estimates)</h2>
+<div class="res" id="out"></div>
+<p class="small">Always round up to the next standard size you can buy. If results look odd, check the hours and watts you entered. The DC-DC figure is a starting point only: check your alternator rating, whether it is a smart alternator, and the charger's specification.</p>
+
+<h2>4. What this does not cover</h2>
+<ul class="small">
+<li>Cable sizes, fuse or breaker ratings and wiring layout. These are a safety matter for a licensed auto-electrician.</li>
+<li>240V appliances, inverters feeding mains circuits, gas or caravan compliance.</li>
+<li>Shade, dust, panel angle and cloud. They can cut real solar output well below the sums above.</li>
+</ul>
+<p class="small"><b>About the sun figures:</b> the figures in the region list are long-term NASA POWER averages (all-sky solar irradiance on a flat surface, satellite-derived) for the darkest month of each season, rounded down a little. The Central Australia figure also agrees with Bureau of Meteorology Alice Springs Airport data. Real days vary with cloud, dust, shade and panel tilt, so leave margin. To check another place, look it up at power.larc.nasa.gov (long-term monthly values in kWh/m2/day, which equals peak sun hours), or take a BoM solar exposure figure in MJ/m2 per day and divide by 3.6. Type your own figure into the box.</p>
+
+<script>
+var NP="Long-term NASA POWER average for a flat panel, darkest month of the season, rounded down a little. Real days vary (cloud, dust, shade, tilt). ";
+var REGIONS=[
+["Central Australia, winter (Alice Springs area)",4.0,NP+"NASA POWER June mean 4.24; BoM Alice Springs Airport June about 4.1."],
+["Top End, dry season (Darwin area)",5.0,NP+"NASA POWER Darwin, lowest dry-season month (June) 5.09."],
+["Top End / far north, wet season",4.0,NP+"NASA POWER Darwin January mean is 5.10, but runs of storm days are far lower: plan on 4.0 and add autonomy days."],
+["Queensland (Brisbane to Rockhampton), winter",3.0,NP+"NASA POWER June: Brisbane 2.98, Rockhampton 3.63."],
+["NSW (Sydney area), winter",2.3,NP+"NASA POWER Sydney June 2.36."],
+["Victoria, winter",1.8,NP+"NASA POWER Melbourne June 1.86."],
+["Tasmania, winter",1.4,NP+"NASA POWER Hobart June 1.46."],
+["South Australia (Adelaide), winter",2.2,NP+"NASA POWER Adelaide June 2.39."],
+["Western Australia south-west (Perth), winter",2.5,NP+"NASA POWER Perth June 2.75."],
+["Western Australia north (Kimberley/Pilbara), dry season",4.2,NP+"NASA POWER June: Port Hedland 4.27, Broome 4.87."],
+["Custom (type your own)",4.0,"Your own figure. Look up your place at power.larc.nasa.gov, or divide a BoM MJ/m2/day figure by 3.6."]
+];
+var sel=document.getElementById('region');
+REGIONS.forEach(function(r,i){var o=document.createElement('option');o.value=i;o.text=r[0];sel.appendChild(o);});
+function regionChange(){var r=REGIONS[sel.value];document.getElementById('sun').value=r[1];calc();}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
+function add(n,w,q,h){var tb=document.querySelector('#loads tbody');var tr=document.createElement('tr');
+tr.innerHTML='<td><input value="'+esc(n)+'"></td><td><input type="number" min="0" value="'+w+'" oninput="calc()"></td><td><input type="number" min="0" value="'+q+'" oninput="calc()"></td><td><input type="number" min="0" step="0.05" value="'+h+'" oninput="calc()"></td><td class="wh">0</td><td class="noprint"><button onclick="this.closest(\'tr\').remove();calc()">x</button></td>';
+tb.appendChild(tr);calc();}
+function v(id){return parseFloat(document.getElementById(id).value)||0;}
+function up(x,list){for(var i=0;i<list.length;i++){if(list[i]>=x)return list[i];}return list[list.length-1];}
+function calc(){
+var rows=document.querySelectorAll('#loads tbody tr'),sub=0,peak=0;
+rows.forEach(function(tr){var i=tr.querySelectorAll('input');var w=parseFloat(i[1].value)||0,q=parseFloat(i[2].value)||0,h=parseFloat(i[3].value)||0;var wh=w*q*h;tr.querySelector('.wh').textContent=Math.round(wh);sub+=wh;peak+=w*q;});
+var wh=sub*(1+v('margin')/100);
+var usable=parseFloat(document.getElementById('chem').value),V=v('volts')||12.8,days=v('days'),sun=v('sun'),eff=v('eff')/100;
+var r=REGIONS[sel.value];document.getElementById('sunnote').textContent='Sun figure note: '+r[2];
+if(wh<=0||sun<=0||eff<=0||usable<=0||V<=0){document.getElementById('out').innerHTML='Add some loads to see results.';return;}
+var ah=wh*days/(usable*V);
+var sw=wh/(sun*eff);
+var cc=ah*parseFloat(document.getElementById('crate').value);
+var sizes=[10,15,20,25,30,40,50,60,80,100];
+var dcdc=up(cc,sizes);
+var dcNote=cc>100?'<p class="small">This is above the largest size listed here (100 A). Chargers that big are uncommon and need a strong alternator: consider a lower charge rate, two chargers, or ask an auto-electrician.</p>':(dcdc>60?'<p class="small">Many single DC-DC chargers stop at 60 A. A bigger size may mean two units or a lower charge rate. Check your alternator rating.</p>':'');
+var dcText=cc>100?'you need about <b>'+Math.round(cc)+' A</b> at the chosen charge rate, which is above the sizes listed here':'you need about <b>'+(Math.round(cc*10)/10)+' A</b> at the chosen charge rate. Next standard size up: <b>'+dcdc+' A</b>';
+var batt=up(ah,[50,100,120,135,150,200,250,300,400]);
+var sol=Math.ceil(sw/50)*50;
+var bigger=ah>400?'<p><b>Battery above 400 Ah:</b> consider reducing loads, or multiple batteries. Discuss with an auto-electrician.</p>':'';
+document.getElementById('out').innerHTML=
+'<p>Daily use: <b>'+Math.round(sub)+' Wh</b>. With margin: <b>'+Math.round(wh)+' Wh/day</b>.</p>'+
+'<p>Battery needed: <b>'+Math.round(ah)+' Ah</b> at '+V+' V. Next common size up: <b>'+batt+' Ah</b>.</p>'+
+'<p>Solar needed: <b>'+Math.round(sw)+' W</b>. Suggested panels: <b>'+sol+' W</b>.</p>'+
+'<p>DC-DC charger: '+dcText+'.</p>'+dcNote+
+'<p class="small">Combined listed loads if all ran at once: about '+Math.round(peak)+' W ('+Math.round(peak/V)+' A at '+V+' V). This is for information only: do not use it to choose cables or fuses.</p>'+bigger;
+}
+add('60 L fridge/freezer (hot weather)',55,1,10);add('LED light',5,3,4);add('Phone/tablet charging',15,2,2);add('12V fan',20,1,5);
+regionChange();
+</script>
+</body>
+</html>
