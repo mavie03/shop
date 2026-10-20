@@ -1,0 +1,11 @@
+Item,Why you need it,Size from your calculator result,Estimate low A$ (example system),Estimate high A$ (example system),Price I found A$,Retailer,Done
+"House battery (LiFePO4 with BMS, or AGM)","Stores your daily energy","Ah: ____",550,900,,,
+"DC-DC charger","Charges the house battery from the tow vehicle (needed on smart alternators)","A: ____",300,450,,,
+"Solar panels (fixed or folding)","Recharges the battery from the sun","W: ____",300,700,,,
+"Solar regulator (MPPT)","Skip if your DC-DC charger has MPPT built in","Match to panels and battery",100,200,,,
+"Cable, lugs, fuses, plugs","Sizes and ratings to be specified by a licensed auto-electrician","Ask your auto-electrician",150,300,,,
+"Fuse or distribution block","Protects and splits circuits - auto-electrician to specify","Ask your auto-electrician",60,150,,,
+"Battery monitor","Shows state of charge so you do not run flat","Match to battery",50,150,,,
+"Installation by licensed auto-electrician","Final design check and safe install","Get 2-3 quotes",,,,,
+"NOTE","Estimate columns are the maker's unsourced guessed ranges for a 130 Ah (next size 135 Ah) / 300 W / 40 A example and are NOT quotes. Prices change. Compare several Australian retailers. General information only; not electrical design or installation advice.",,,,,,
+"CONSUMER GUARANTEES","Our goods come with guarantees that cannot be excluded under the Australian Consumer Law. You are entitled to a replacement or refund for a major failure and compensation for any other reasonably foreseeable loss or damage. You are also entitled to have the goods repaired or replaced if the goods fail to be of acceptable quality and the failure does not amount to a major failure.",,,,,,
