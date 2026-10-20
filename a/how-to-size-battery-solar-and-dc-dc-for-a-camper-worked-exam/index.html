@@ -1,0 +1,55 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to Size Battery, Solar and DC-DC for a Camper (Worked Example) | Malachi Smith</title><meta name="description" content="Work out daily watt-hours, battery Ah, solar watts and DC-DC charger size for a 4WD or camper trailer, with a full worked example in Australian conditions.">
+<link rel="canonical" href="https://mavie03.github.io/shop/a/how-to-size-battery-solar-and-dc-dc-for-a-camper-worked-exam/">
+<style>:root{--bg:#fffaf5;--text:#1f1720;--muted:#6b5f6e;--brand:#ff2e93;--card:#fff;--border:#eadde5}
+@media (prefers-color-scheme:dark){:root{--bg:#120d14;--text:#f6eef8;--muted:#a898b0;--card:#1c151f;--border:#30263a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main,header,footer{max-width:760px;margin:0 auto;padding:16px}header a{color:var(--text);text-decoration:none;font-weight:700}
+a{color:var(--brand)}h1{line-height:1.2}.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin:14px 0}
+.price{font-size:1.4rem;font-weight:700}.buy{display:inline-block;background:var(--brand);color:#fff;padding:12px 22px;border-radius:999px;
+text-decoration:none;font-weight:700}.muted{color:var(--muted)}footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--border);margin-top:32px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}code{background:var(--border);padding:0 4px;border-radius:4px}
+img{max-width:100%;height:auto}.shot{border:1px solid var(--border);border-radius:12px;display:block}figure{margin:14px 0}figcaption{font-size:.9rem}
+a.card{display:block;color:var(--text);text-decoration:none}a.card .thumb{border-radius:10px;margin-bottom:8px;display:block}</style></head><body>
+<header><a href="https://mavie03.github.io/shop/">Malachi Smith</a></header><main><h1>How to Size Battery, Solar and DC-DC for a Camper (Worked Example)</h1><p>Sizing a 12V system by guesswork is how people end up with a flat battery on day three, or a pile of expensive gear they never needed. The good news: it comes down to five numbers, and you can get a sensible estimate with a pen and a phone calculator.</p>
+<p>This article walks through all five, start to finish, using one example setup. Every figure in the example is an assumption for illustration. Swap in your own.</p>
+<h3>The five numbers</h3>
+<ul><li><strong>Daily watt-hours (Wh):</strong> how much energy you use in 24 hours.</li><li><strong>Battery size:</strong> how much storage that needs, allowing for usable capacity.</li><li><strong>Solar watts:</strong> how much panel it takes to refill that each day.</li><li><strong>DC-DC charger size:</strong> how fast the alternator can top up while you drive.</li><li><strong>Margin:</strong> a buffer for cloud, dust, heat and ageing.</li></ul>
+<h3>Step 1: Add up daily watt-hours</h3>
+<p>For each device: watts × hours used per day = Wh. Check the label or manual for watts. For a compressor fridge, the motor only runs part of the time, so estimate a &quot;duty cycle&quot; (the share of the day it&#x27;s actually running). It&#x27;s higher in a hot Australian summer than a cool night in the Flinders.</p>
+<p><strong>Example: 4WD plus camper trailer, two people</strong></p>
+<p>| Device | Watts | Hours/day | Wh/day | |---|---|---|---| | 60L compressor fridge | 45 | 24 × 40% duty = 9.6 | about 432 | | LED lights | 10 | 4 | 40 | | Water pump | 60 | 0.2 | 12 | | Phones, camera, laptop charging | – | – | 100 | | <strong>Total</strong> | | | <strong>about 584 Wh</strong> |</p>
+<p>The fridge is usually the biggest load, so measure it if you can. A cheap plug-in 12V power meter over a day gives a far better figure than a brochure.</p>
+<h3>Step 2: Add a margin</h3>
+<p>Real days are messier than a spreadsheet. A 20% margin is a reasonable starting point (an assumption you can adjust):</p>
+<p>584 × 1.2 = <strong>about 700 Wh per day</strong></p>
+<p>If you want to run for more than a day without sun or driving, multiply by the number of days of &quot;autonomy&quot; you want. Two days would be about 1,400 Wh.</p>
+<h3>Step 3: Convert to battery size</h3>
+<p>Batteries can&#x27;t be drained fully without shortening their life. The usable share depends on type. These are common rules of thumb; check your battery&#x27;s datasheet:</p>
+<ul><li><strong>Lithium (LiFePO4):</strong> often about 80–90% usable.</li><li><strong>AGM:</strong> commonly planned at around 50% usable.</li></ul>
+<p><strong>Lithium, one day of storage:</strong> 700 Wh ÷ 0.9 usable = about 778 Wh. At about 12.8V, that&#x27;s 778 ÷ 12.8 = <strong>about 61 Ah</strong>. In practice you&#x27;d buy a 100Ah battery, which leaves room for growth and a cloudy second day.</p>
+<p><strong>AGM, one day of storage:</strong> 700 Wh ÷ 0.5 = 1,400 Wh. At 12V, that&#x27;s about <strong>117 Ah</strong>, so a 120Ah or 135Ah battery, and it&#x27;s much heavier. This weight difference is why many people pay more for lithium.</p>
+<h3>Step 4: Size the solar</h3>
+<p>You need to know your &quot;peak sun hours&quot;: roughly, how many hours a day the sun is at full strength equivalent. This varies a lot across Australia and by season. NASA&#x27;s POWER project publishes long-term averages by location. Use the <strong>darkest month</strong> you&#x27;ll travel in, not the best, so winter doesn&#x27;t catch you out.</p>
+<p>Panels also lose output to heat, dust, wiring and the charge controller. A 25% loss allowance is a cautious assumption.</p>
+<p><strong>Formula:</strong> daily Wh ÷ (sun hours × 0.75) = panel watts</p>
+<p>Assuming 4 peak sun hours (a plausible figure for a southern winter, but check your location):</p>
+<p>700 ÷ (4 × 0.75) = <strong>about 233 W</strong>, so a 250W panel or two 130–150W panels.</p>
+<p>In central Australia in winter, or the tropical north in the dry, you&#x27;ll often get more sun than that, so you could get away with less. In Tasmania or Victoria in July, you may get less, and you&#x27;d need more panel or more driving. Shade from the camper, a flat-mounted panel and a dusty dirt road all reduce the real figure, which is why a margin matters.</p>
+<h3>Step 5: Size the DC-DC charger</h3>
+<p>A DC-DC charger sits between your starter battery and your auxiliary battery. It charges the second battery properly from the alternator, and it&#x27;s especially important with modern &quot;smart&quot; alternators that drop voltage. Many lithium batteries also need one.</p>
+<p>A common rule of thumb is to size the charger at roughly 20–30% of battery capacity in amps for lithium. For a 100Ah battery, that&#x27;s <strong>20–30A</strong>. A 25A unit is a typical choice. Larger isn&#x27;t always better: the charger also has to suit your alternator, wiring and the battery&#x27;s maximum charge rate. Always check the battery maker&#x27;s specs.</p>
+<p>Driving charge helps a lot: an hour of driving at 25A is up to about 25Ah (roughly 300 Wh) in ideal conditions. Real figures are lower once you allow for heat and voltage drop.</p>
+<h3>Common mistakes</h3>
+<ul><li><strong>Using the fridge&#x27;s label watts as if it ran all day.</strong> Duty cycle matters, but so does heat. Park it in shade and give it ventilation.</li><li><strong>Sizing solar on a summer sun figure.</strong> Plan for your darkest travel month.</li><li><strong>Ignoring usable capacity.</strong> A &quot;100Ah&quot; AGM isn&#x27;t 100Ah you can use.</li><li><strong>Buying the charger or panel first.</strong> Do the load total first, then work outward.</li><li><strong>Forgetting the inverter.</strong> If you add one, its idle draw and conversion losses add to your total.</li></ul>
+<h3>What you should leave to a professional</h3>
+<p>This article covers <em>sizing</em> only. It does not cover cable thickness, fuse or breaker ratings, or how to wire anything. Those depend on current, cable length and your vehicle, and mistakes can cause fires. Get a licensed auto-electrician for 12V installation work, and a licensed electrician for anything 240V or mains.</p>
+<h3>Shopping tip</h3>
+<p>Once you have your numbers, compare the same specs across several retailers, and note battery type, warranty and the DC-DC charger&#x27;s maximum input and output. Prices vary a lot, so keep a simple list rather than relying on memory.</p>
+<h3>Where the 12V Power Plan Kit fits</h3>
+<p>If you&#x27;d rather not do this arithmetic by hand, the <strong>12V Power Plan Kit</strong> (A$24) puts it in one place: an offline HTML calculator where you enter your devices, region and season to get watt-hours, battery Ah, solar watts and DC-DC size with margins you can change; a buyer guide with a 4WD and camper trailer worked example and Australian conditions; and a CSV parts checklist for comparing prices. It&#x27;s general information, not electrical design, and it gives no cable sizes or fuse ratings. Its sun figures are long-term NASA POWER averages for a flat panel, so you can type your own. Free retailer calculators exist too; the kit&#x27;s difference is the Australian notes, worked example and checklist together. There&#x27;s a 30-day money-back guarantee, in addition to your Australian Consumer Law rights.</p>
+<h3>Sources</h3>
+<ul><li>NASA POWER (solar resource data): https://power.larc.nasa.gov/</li><li>Calculations in this article are the author&#x27;s own arithmetic using stated assumptions; usable-capacity and charger rules of thumb vary by manufacturer, so check your product&#x27;s datasheet.</li></ul><div class="card"><strong>12V Power Plan Kit for Australian Caravans, Camper Trailers and 4WDs</strong><p class="muted">Work out your battery, solar and DC-DC charger size in minutes, with Australian-conditions notes and a shopping checklist.</p><a class="buy" href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">See it: A$24.00</a></div></main>
+<footer><p>Malachi Smith, Alice Springs, Australia. Questions: <a href="mailto:adminapexinventions@gmail.com">adminapexinventions@gmail.com</a>.
+<a href="https://mavie03.github.io/shop/refunds/">Refunds</a> · <a href="https://mavie03.github.io/shop/terms/">Terms</a> ·
+<a href="https://mavie03.github.io/shop/privacy/">Privacy</a>. Prices in AUD. Made with care, with help from AI tools.</p></footer></body></html>
