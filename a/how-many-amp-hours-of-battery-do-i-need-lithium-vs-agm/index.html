@@ -1,0 +1,54 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How Many Amp Hours of Battery Do I Need? Lithium vs AGM | Malachi Smith</title><meta name="description" content="How many Ah of auxiliary battery does a camper, caravan or 4WD need? A worked lithium vs AGM example with the maths shown, in Australian conditions.">
+<link rel="canonical" href="https://mavie03.github.io/shop/a/how-many-amp-hours-of-battery-do-i-need-lithium-vs-agm/">
+<style>:root{--bg:#fffaf5;--text:#1f1720;--muted:#6b5f6e;--brand:#ff2e93;--card:#fff;--border:#eadde5}
+@media (prefers-color-scheme:dark){:root{--bg:#120d14;--text:#f6eef8;--muted:#a898b0;--card:#1c151f;--border:#30263a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main,header,footer{max-width:760px;margin:0 auto;padding:16px}header a{color:var(--text);text-decoration:none;font-weight:700}
+a{color:var(--brand)}h1{line-height:1.2}.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin:14px 0}
+.price{font-size:1.4rem;font-weight:700}.buy{display:inline-block;background:var(--brand);color:#fff;padding:12px 22px;border-radius:999px;
+text-decoration:none;font-weight:700}.muted{color:var(--muted)}footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--border);margin-top:32px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}code{background:var(--border);padding:0 4px;border-radius:4px}
+img{max-width:100%;height:auto}.shot{border:1px solid var(--border);border-radius:12px;display:block}figure{margin:14px 0}figcaption{font-size:.9rem}
+a.card{display:block;color:var(--text);text-decoration:none}a.card .thumb{border-radius:10px;margin-bottom:8px;display:block}</style></head><body>
+<header><a href="https://mavie03.github.io/shop/">Malachi Smith</a></header><main><h1>How Many Amp Hours of Battery Do I Need? Lithium vs AGM</h1><p><strong>Short answer:</strong> for a typical fridge, lights, pump and phone-charging setup using about 760 Wh a day, two days without sun needs roughly <strong>150 Ah of lithium (LiFePO4)</strong> or roughly <strong>250 Ah of AGM</strong>. The difference is mostly about how much of each battery you can safely use. Your numbers will differ, so here is how to work them out.</p>
+<p>All figures below are <strong>illustrative assumptions</strong>, not measurements of your gear. Swap in your own.</p>
+<h3>The quick comparison</h3>
+<p>| | Lithium (LiFePO4) | AGM (lead-acid) | |---|---|---| | Usable share of rated capacity (typical planning figure, varies by brand) | about 80% | about 50% | | Nominal voltage used in the maths | 12.8 V | 12 V | | 1 day of use (760 Wh) | ~74 Ah, so a 100 Ah battery | ~127 Ah, so a 120-135 Ah battery | | 2 days, no sun | ~148 Ah, so a 150 Ah battery | ~253 Ah, so about 250 Ah or more | | Rough weight for the 2-day size (approximate) | ~20 kg | ~70 kg |</p>
+<p>Check your own battery&#x27;s datasheet for its recommended depth of discharge. Brands differ, and some lithium batteries allow more than 80%.</p>
+<h3>Step 1: Add up your daily watt-hours</h3>
+<p>Watt-hours (Wh) = watts x hours used per day. Amp-hours are easier to compare once everything is in Wh.</p>
+<p>Illustrative load for a weekend or holiday camper:</p>
+<p>| Item | Assumption | Wh per day | |---|---|---| | 12V compressor fridge | average draw over a full day (it cycles on and off) | 480 | | LED lights | 10 W total x 4 hours | 40 | | Water pump | 50 W x 0.2 hours (12 minutes) | 10 | | Phones, laptop, camera charging | allowance | 100 | | <strong>Subtotal</strong> | | <strong>630</strong> | | Add 20% for losses and things you forgot | 630 x 1.2 | <strong>756, call it 760</strong> |</p>
+<p>The fridge is the big one, and it changes a lot with ambient temperature, lid openings and how well it is packed. If you can, measure it with a DC meter over 24 hours.</p>
+<h3>Step 2: Decide how many days you want to run without sun</h3>
+<p>This is called autonomy. A weekend camper might want one day. Someone parked under trees or sitting out a cloudy spell in the Top End wet season might want two or three. Two days is a sensible starting point for the example.</p>
+<p>2 days x 760 Wh = <strong>1,520 Wh</strong> of usable energy needed.</p>
+<h3>Step 3: Convert to battery size</h3>
+<p>Divide by the usable share, then by voltage.</p>
+<p><strong>Lithium:</strong></p>
+<ul><li>1,520 Wh / 0.8 = 1,900 Wh of rated capacity</li><li>1,900 Wh / 12.8 V = 148.4 Ah, so a <strong>150 Ah</strong> battery (or 2 x 100 Ah if that is what is available)</li></ul>
+<p><strong>AGM:</strong></p>
+<ul><li>1,520 Wh / 0.5 = 3,040 Wh of rated capacity</li><li>3,040 Wh / 12 V = 253.3 Ah, so about <strong>250-260 Ah</strong> (for example 2 x 130 Ah)</li></ul>
+<p>The same energy need makes the AGM bank bigger, heavier and, in most cases, more awkward to fit in a camper trailer or the back of a 4WD. AGM can still make sense on a tight budget or for a short-trip setup. The sums just need to be honest about the extra capacity.</p>
+<h3>Step 4: Check the battery can be recharged</h3>
+<p>A big battery is only useful if you can refill it. Two sources matter:</p>
+<p><strong>Solar.</strong> Daily Wh / peak sun hours, plus about 25% buffer.</p>
+<ul><li>Summer, assuming 4 peak sun hours (illustrative): 760 / 4 = 190 W, x 1.25 = 237.5, so about <strong>240 W</strong></li><li>Winter, assuming 2.5 peak sun hours (illustrative): 760 / 2.5 = 304 W, x 1.25 = 380, so about <strong>380 W</strong></li></ul>
+<p>Real peak sun hours depend on where you are, the season, tilt, shade and dust. Southern Australia in winter can be far below the north in the dry season, so look up your region rather than trusting a generic figure.</p>
+<p><strong>Driving (DC-DC charger).</strong> Charge current from the vehicle is limited by the DC-DC charger&#x27;s rating, not the battery size. A 150 Ah lithium battery would be refilled from 20% to 100% (120 Ah) in theory by a 40 A charger in roughly 3 hours (120 / 40), but real charging is slower once you allow for voltage drop, heat, cable runs and the vehicle&#x27;s output. Treat that as a best case. Our separate DC-DC articles cover charger sizing in more detail.</p>
+<h3>Common mistakes</h3>
+<ul><li><strong>Sizing to the rated Ah, not the usable Ah.</strong> A 100 Ah AGM does not give you 100 Ah of everyday use.</li><li><strong>Ignoring the fridge&#x27;s real consumption.</strong> Using the label&#x27;s rating instead of measured or realistic average draw.</li><li><strong>Planning for summer only.</strong> Winter sun hours can cut solar output hard.</li><li><strong>Forgetting the charge side.</strong> A big battery with a small panel and short drives never fills up.</li><li><strong>Mixing old and new batteries</strong> in one bank.</li></ul>
+<h3>Safety note</h3>
+<p>This is general planning information, not electrical design. Cable sizes, fuses, breakers, battery installation and charger wiring are safety-critical (fire and short-circuit risk), so have a licensed auto-electrician do or check them. Anything involving 240V or mains power must be done by a licensed electrician.</p>
+<h3>FAQ</h3>
+<p><strong>How many Ah of lithium do I need for a camper trailer?</strong> Use the steps above. The example gives about 150 Ah for two days. Many weekenders with a small fridge get by on 100 Ah.</p>
+<p><strong>Is 100 Ah enough for a 12V fridge?</strong> For one day of the example load, a 100 Ah lithium battery is enough with margin (74 Ah needed). For two or more days without sun, it is not.</p>
+<p><strong>Is lithium worth the extra cost?</strong> It usually costs more upfront but gives more usable capacity per kilogram. Whether it pays off depends on how often you travel and your weight limits.</p>
+<h3>Where the Power Plan Kit fits</h3>
+<p>If you would rather not do these sums by hand, the <a href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">12V Power Plan Kit</a> (A$24.00) has an offline calculator that takes your fridge, lights, pump and gear, your region and season, and gives daily Wh, battery Ah, solar watts and DC-DC size with margins you can change. It also includes a buyer guide with a worked 4WD and camper trailer example and a parts checklist (CSV) for comparing retailer prices. It is general information only: no cable sizes or fuse ratings, it is not personalised, and free retailer calculators exist too. It comes with a 30-day money-back guarantee, on top of your rights under the Australian Consumer Law.</p>
+<h3>Sources</h3>
+<p>Calculations in this article are the author&#x27;s own, using the stated assumptions. Usable-capacity percentages (about 80% lithium, about 50% AGM) and weights are common planning figures; confirm with your battery&#x27;s datasheet.</p><div class="card"><strong>12V Power Plan Kit for Australian Caravans, Camper Trailers and 4WDs</strong><p class="muted">Work out your battery, solar and DC-DC charger size in minutes, with Australian-conditions notes and a shopping checklist.</p><a class="buy" href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">See it: A$24.00</a></div></main>
+<footer><p>Malachi Smith, Alice Springs, Australia. Questions: <a href="mailto:adminapexinventions@gmail.com">adminapexinventions@gmail.com</a>.
+<a href="https://mavie03.github.io/shop/refunds/">Refunds</a> · <a href="https://mavie03.github.io/shop/terms/">Terms</a> ·
+<a href="https://mavie03.github.io/shop/privacy/">Privacy</a>. Prices in AUD. Made with care, with help from AI tools.</p></footer></body></html>
