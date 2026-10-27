@@ -1,0 +1,46 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How Many Days Will a 12V Battery Run a Fridge Without Charging? | Malachi Smith</title><meta name="description" content="How many days a 100Ah lithium or AGM battery runs a camper fridge and lights with no sun or driving. Worked maths, a quick table and what to size up.">
+<link rel="canonical" href="https://mavie03.github.io/shop/a/how-many-days-will-a-12v-battery-run-a-fridge-without-chargi/">
+<style>:root{--bg:#fffaf5;--text:#1f1720;--muted:#6b5f6e;--brand:#ff2e93;--card:#fff;--border:#eadde5}
+@media (prefers-color-scheme:dark){:root{--bg:#120d14;--text:#f6eef8;--muted:#a898b0;--card:#1c151f;--border:#30263a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main,header,footer{max-width:760px;margin:0 auto;padding:16px}header a{color:var(--text);text-decoration:none;font-weight:700}
+a{color:var(--brand)}h1{line-height:1.2}.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin:14px 0}
+.price{font-size:1.4rem;font-weight:700}.buy{display:inline-block;background:var(--brand);color:#fff;padding:12px 22px;border-radius:999px;
+text-decoration:none;font-weight:700}.muted{color:var(--muted)}footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--border);margin-top:32px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}code{background:var(--border);padding:0 4px;border-radius:4px}
+img{max-width:100%;height:auto}.shot{border:1px solid var(--border);border-radius:12px;display:block}figure{margin:14px 0}figcaption{font-size:.9rem}
+a.card{display:block;color:var(--text);text-decoration:none}a.card .thumb{border-radius:10px;margin-bottom:8px;display:block}</style></head><body>
+<header><a href="https://mavie03.github.io/shop/">Malachi Smith</a></header><main><h1>How Many Days Will a 12V Battery Run a Fridge Without Charging?</h1><p><strong>Short answer:</strong> with the illustrative load below (about 540 Wh a day), a 100Ah lithium battery runs a fridge and basic gear for roughly <strong>1.9 days</strong> with no charging, and a 100Ah AGM for roughly <strong>1.1 days</strong>. For three days you&#x27;d want about 200Ah of lithium or 300Ah of AGM. Your real number depends on your fridge, the heat and how you use power, so treat this as a method, not a promise.</p>
+<h3>Quick table (illustrative)</h3>
+<p>| Battery | Nominal energy | Usable share | Usable Wh | Days at 540 Wh/day | |---|---|---|---|---| | 100Ah lithium (LiFePO4) | 1,280 Wh | 80% | 1,024 Wh | 1.9 | | 100Ah AGM | 1,200 Wh | 50% | 600 Wh | 1.1 | | 200Ah lithium | 2,560 Wh | 80% | 2,048 Wh | 3.8 | | 200Ah AGM | 2,400 Wh | 50% | 1,200 Wh | 2.2 |</p>
+<h3>The assumptions (change these for your rig)</h3>
+<p>These are my own illustrative numbers, not measurements of your gear:</p>
+<ul><li><strong>Fridge:</strong> 480 Wh a day (about 40Ah at 12V). A 12V compressor fridge in a hot Australian summer can use more than in cool weather, so check your own fridge&#x27;s real draw.</li><li><strong>LED lights:</strong> 4 lights × 5W × 1 hour each = 20 Wh.</li><li><strong>Phones and USB:</strong> 30 Wh.</li><li><strong>Water pump:</strong> 10 Wh.</li><li><strong>Total:</strong> 480 + 20 + 30 + 10 = <strong>540 Wh a day</strong>.</li></ul>
+<p>Battery energy is amp hours × voltage. Lithium (LiFePO4) is about 12.8V nominal, AGM about 12V. The usable shares are deliberately conservative: 80% for lithium keeps a reserve, and 50% for AGM is a common rule to protect its life. Some lithium batteries allow more, and some makers say different things for AGM, so follow your battery&#x27;s datasheet. This ignores wiring and conversion losses, so real runtime will be a little shorter.</p>
+<h3>Worked example: 100Ah lithium</h3>
+<ul><li>Nominal energy: 100Ah × 12.8V = 1,280 Wh.</li><li>Usable at 80%: 1,280 × 0.8 = 1,024 Wh.</li><li>Days: 1,024 ÷ 540 = <strong>1.9 days</strong>.</li></ul>
+<h3>Worked example: 100Ah AGM</h3>
+<ul><li>Nominal energy: 100Ah × 12V = 1,200 Wh.</li><li>Usable at 50%: 1,200 × 0.5 = 600 Wh.</li><li>Days: 600 ÷ 540 = <strong>1.1 days</strong>.</li></ul>
+<h3>How big a battery for three days with no charging?</h3>
+<p>Work backwards. Three days × 540 Wh = 1,620 Wh needed.</p>
+<ul><li><strong>Lithium:</strong> 1,620 ÷ 0.8 = 2,025 Wh of nominal energy. 2,025 ÷ 12.8V = about 158Ah. In practice that means a <strong>200Ah</strong> battery (or two 100Ah).</li><li><strong>AGM:</strong> 1,620 ÷ 0.5 = 3,240 Wh. 3,240 ÷ 12V = 270Ah, so about <strong>300Ah</strong>.</li></ul>
+<p>That is why lithium often wins for off-grid setups: you carry less weight for the same usable energy. It also costs more upfront, so compare prices on your own parts list.</p>
+<h3>What about topping up while you&#x27;re out?</h3>
+<p>Autonomy is your safety net, not your plan. Two things refill the battery:</p>
+<ul><li><strong>Solar.</strong> To replace 540 Wh a day you divide by your peak sun hours. At an illustrative 4 peak sun hours (a middling winter figure in many places; yours will differ): 540 ÷ 4 = 135W, plus a 25% buffer = about <strong>170W</strong> of panel. At 5 peak sun hours it&#x27;s 108W, or about 135W with the buffer. Winter in southern Australia can be far lower than 4, so check a long-term source like NASA POWER for your area.</li><li><strong>A DC-DC charger while driving.</strong> It charges the camper battery from the vehicle&#x27;s alternator. Charge time depends on the charger&#x27;s amps and how much you&#x27;ve drawn down. Real charging tapers near full, so any simple time estimate is a minimum.</li></ul>
+<h3>Common mistakes</h3>
+<ul><li><strong>Counting 100Ah as 100Ah usable.</strong> Usable depends on battery type.</li><li><strong>Using a mild-day fridge figure for a 40°C day.</strong> Fridges work harder in heat, so autonomy shrinks when you most need it.</li><li><strong>Forgetting the small stuff.</strong> Pumps, USB charging, a 12V TV and a laptop add up.</li><li><strong>Planning for zero reserve.</strong> Leave room for a cloudy or shaded run of days.</li><li><strong>Assuming a battery is a charger.</strong> A bigger battery buys time, but it still needs recharging.</li></ul>
+<h3>Safety note</h3>
+<p>This is general information, not electrical design. Cable sizes, fuses and how a battery and DC-DC charger are wired into a vehicle should be done or checked by a licensed auto-electrician. Anything involving 240V or mains power needs a licensed electrician.</p>
+<h3>FAQ</h3>
+<p><strong>Can a 100Ah battery run a fridge for a weekend?</strong> On these assumptions, a lithium battery gets you about two days, so a weekend is tight without solar or driving. Add a panel or a bigger battery for margin.</p>
+<p><strong>Is a 12V fridge the biggest load?</strong> Usually, in a basic setup. That&#x27;s why the fridge figure matters most.</p>
+<p><strong>How do I find my fridge&#x27;s real draw?</strong> Use the maker&#x27;s specs as a start, then measure with a battery monitor over a full day in the weather you&#x27;ll travel in.</p>
+<h3>Want the whole plan in one place?</h3>
+<p>The <a href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">12V Power Plan Kit</a> (A$24) has an offline calculator where you enter your own loads, region and season and get daily watt-hours, battery Ah, solar watts and a DC-DC size, plus a worked 4WD and camper trailer example and a parts checklist. It&#x27;s general information, not personalised, and it doesn&#x27;t give cable sizes or fuse ratings. Free retailer calculators exist too. If it isn&#x27;t useful, there&#x27;s a 30-day money-back guarantee, on top of your Australian Consumer Law rights.</p>
+<h3>Sources</h3>
+<p>No external sources were used. Figures are labelled illustrative assumptions and the arithmetic was checked by hand. For real sun figures see NASA POWER: https://power.larc.nasa.gov/</p><div class="card"><strong>12V Power Plan Kit for Australian Caravans, Camper Trailers and 4WDs</strong><p class="muted">Work out your battery, solar and DC-DC charger size in minutes, with Australian-conditions notes and a shopping checklist.</p><a class="buy" href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">See it: A$24.00</a></div></main>
+<footer><p>Malachi Smith, Alice Springs, Australia. Questions: <a href="mailto:adminapexinventions@gmail.com">adminapexinventions@gmail.com</a>.
+<a href="https://mavie03.github.io/shop/refunds/">Refunds</a> · <a href="https://mavie03.github.io/shop/terms/">Terms</a> ·
+<a href="https://mavie03.github.io/shop/privacy/">Privacy</a>. Prices in AUD. Made with care, with help from AI tools.</p></footer></body></html>
