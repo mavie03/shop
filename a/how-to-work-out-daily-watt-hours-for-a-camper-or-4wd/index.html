@@ -1,0 +1,55 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to Work Out Daily Watt-Hours for a Camper or 4WD | Malachi Smith</title><meta name="description" content="A step-by-step 12V power audit for caravans, camper trailers and 4WDs: list your gear, get daily watt-hours, then battery and solar sizes. Worked example.">
+<link rel="canonical" href="https://mavie03.github.io/shop/a/how-to-work-out-daily-watt-hours-for-a-camper-or-4wd/">
+<style>:root{--bg:#fffaf5;--text:#1f1720;--muted:#6b5f6e;--brand:#ff2e93;--card:#fff;--border:#eadde5}
+@media (prefers-color-scheme:dark){:root{--bg:#120d14;--text:#f6eef8;--muted:#a898b0;--card:#1c151f;--border:#30263a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main,header,footer{max-width:760px;margin:0 auto;padding:16px}header a{color:var(--text);text-decoration:none;font-weight:700}
+a{color:var(--brand)}h1{line-height:1.2}.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin:14px 0}
+.price{font-size:1.4rem;font-weight:700}.buy{display:inline-block;background:var(--brand);color:#fff;padding:12px 22px;border-radius:999px;
+text-decoration:none;font-weight:700}.muted{color:var(--muted)}footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--border);margin-top:32px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}code{background:var(--border);padding:0 4px;border-radius:4px}
+img{max-width:100%;height:auto}.shot{border:1px solid var(--border);border-radius:12px;display:block}figure{margin:14px 0}figcaption{font-size:.9rem}
+a.card{display:block;color:var(--text);text-decoration:none}a.card .thumb{border-radius:10px;margin-bottom:8px;display:block}</style></head><body>
+<header><a href="https://mavie03.github.io/shop/">Malachi Smith</a></header><main><h1>How to Work Out Daily Watt-Hours for a Camper or 4WD</h1><p><strong>Short answer:</strong> multiply each device&#x27;s watts by the hours it runs each day, then add them up. That total is your daily watt-hours (Wh). Every other number (battery Ah, solar watts, DC-DC charger) comes from it. A simple weekend setup with a fridge, lights, a pump, phones and a laptop often lands somewhere around 500 to 900 Wh a day. That&#x27;s an estimate, so check your own gear.</p>
+<h3>The formula</h3>
+<p><strong>Watts × hours per day = Wh per day</strong></p>
+<p>If you only know amps, convert first: <strong>volts × amps = watts</strong>. A device drawing 5A at 12V uses 60W.</p>
+<h3>Step 1: List everything that draws power</h3>
+<p>Walk around the rig and write down each item. Check the label or manual for watts or amps. Don&#x27;t forget:</p>
+<ul><li>Fridge or freezer (the biggest load by far)</li><li>LED lights</li><li>Water pump</li><li>Phone, tablet and camera charging</li><li>Laptop, drone batteries, Starlink or a mobile hotspot</li><li>Fans, diesel heater fans, inverter standby draw</li></ul>
+<p>Fridge use varies a lot with the model, the ambient temperature, how often you open it and how full it is. A figure of about 480 Wh a day for a mid-size compressor fridge is a typical value, not a spec. Your fridge&#x27;s real figure may be well above or below it.</p>
+<h3>Step 2: Estimate realistic hours</h3>
+<p>Be honest. Lights are only on after dark. A pump runs for minutes, not hours. A fridge motor cycles on and off, so use a daily total rather than &quot;24 hours × rated watts&quot;.</p>
+<h3>Step 3: Worked example (illustrative assumptions)</h3>
+<p>These devices and run times are made up for the example. Swap in your own.</p>
+<p>| Device | Watts | Hours/day | Wh/day | |---|---|---|---| | Compressor fridge (typical daily figure) | n/a | n/a | 480 | | 3 LED lights | 3 × 5W = 15W | 4 | 60 | | Water pump | 60W | 1/6 (10 min total) | 10 | | Two phones charging | n/a | n/a | 20 | | Laptop | 45W | 2 | 90 | | Fan | 15W | 5 | 75 | | <strong>Total</strong> | | | <strong>735</strong> |</p>
+<p>Check: 480 + 60 + 10 + 20 + 90 + 75 = 735 Wh.</p>
+<p>Add a margin for cable losses, cloudy days and gear you&#x27;ll add later. A 20% margin gives 735 × 1.2 = <strong>882 Wh/day</strong>. The rest of this example uses the plain 735 Wh so the steps are easy to follow. Use the margin if you want to be conservative.</p>
+<h3>Step 4: Turn Wh into battery size</h3>
+<p>Battery energy (Wh) = Ah × volts. A lithium (LiFePO4) battery is nominally 12.8V.</p>
+<p>Usable capacity depends on the chemistry. Common rules of thumb are about 80% for lithium and about 50% for AGM. These vary by maker, so check the datasheet.</p>
+<p><strong>Lithium, one day of use with no charging:</strong></p>
+<ul><li>735 Wh ÷ 0.8 usable = 919 Wh of battery</li><li>919 ÷ 12.8V = <strong>about 72Ah</strong></li></ul>
+<p>A 100Ah lithium battery holds 100 × 12.8 = 1,280 Wh. At 80% usable that&#x27;s 1,024 Wh, which is 1,024 ÷ 735 ≈ <strong>1.4 days</strong> without any charging.</p>
+<p><strong>AGM at 50% usable:</strong></p>
+<ul><li>735 ÷ 0.5 = 1,470 Wh</li><li>1,470 ÷ 12V ≈ <strong>123Ah</strong> for one day</li></ul>
+<p>That&#x27;s why lithium often needs fewer amp-hours for the same runtime. It&#x27;s also usually a bigger upfront cost.</p>
+<h3>Step 5: Turn Wh into solar watts</h3>
+<p><strong>Daily Wh ÷ peak sun hours, then add about 25% for losses.</strong></p>
+<p>Peak sun hours differ by place and season. These are illustrative figures, not your local numbers:</p>
+<ul><li>Summer, about 6 peak sun hours: 735 ÷ 6 = 122.5W, × 1.25 ≈ <strong>153W</strong></li><li>Winter, about 4 peak sun hours: 735 ÷ 4 = 183.75W, × 1.25 ≈ <strong>230W</strong></li></ul>
+<p>Winter is the season most guides skip. If you travel south in winter, or camp in shade, plan for the lower figure. Real days vary with cloud, dust, shade and panel tilt. Long-term NASA POWER averages are a good starting point for your region.</p>
+<h3>Step 6: Check your driving charge</h3>
+<p>If you charge from the vehicle, a DC-DC charger tops up the battery while you drive. A rough check: how many Wh can it add per hour? A 25A charger at about 14V is about 350W at the battery side, and in practice less after losses and taper. Over a 3-hour drive that could add around 1,000 Wh at best. That&#x27;s a maximum, not a promise. Real charging tapers as the battery fills.</p>
+<h3>Common mistakes</h3>
+<ul><li><strong>Using the fridge&#x27;s rated watts × 24 hours.</strong> This overstates the load, because the compressor cycles.</li><li><strong>Forgetting standby draw</strong> from inverters, monitors and USB hubs.</li><li><strong>Sizing for summer only.</strong> Winter solar can be much lower.</li><li><strong>Treating 100Ah as 100Ah usable.</strong> Check the usable depth of discharge for your battery type.</li><li><strong>Not leaving room to grow.</strong> A margin is cheaper than replacing a battery.</li></ul>
+<h3>Safety note</h3>
+<p>This is general information, not electrical design. Cable sizes, fuse ratings and the wiring of batteries, chargers and solar regulators should be done or checked by a licensed auto-electrician. Anything involving 240V or mains power needs a licensed electrician.</p>
+<h3>Want it done for you in minutes?</h3>
+<p>If you&#x27;d rather not do the sums by hand, the <a href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">12V Power Plan Kit</a> (A$24.00) has an offline calculator. You enter your gear, pick a region and season, and it gives daily Wh, battery Ah, solar watts and a DC-DC size, with margins you can change. It also has a buyer guide with a 4WD and camper trailer worked example, and a CSV parts checklist for comparing prices. It&#x27;s general information only: no cable or fuse sizing, sun figures are long-term averages, and it isn&#x27;t personalised. Free retailer calculators exist too, and this adds Australian conditions and a checklist in one place. There&#x27;s a 30-day money-back guarantee, on top of your Australian Consumer Law rights.</p>
+<h3>Sources</h3>
+<p>No external sources were used. The worked example uses illustrative assumptions and common rules of thumb stated above. The maths was checked by hand.</p><div class="card"><strong>12V Power Plan Kit for Australian Caravans, Camper Trailers and 4WDs</strong><p class="muted">Work out your battery, solar and DC-DC charger size in minutes, with Australian-conditions notes and a shopping checklist.</p><a class="buy" href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">See it: A$24.00</a></div></main>
+<footer><p>Malachi Smith, Alice Springs, Australia. Questions: <a href="mailto:adminapexinventions@gmail.com">adminapexinventions@gmail.com</a>.
+<a href="https://mavie03.github.io/shop/refunds/">Refunds</a> · <a href="https://mavie03.github.io/shop/terms/">Terms</a> ·
+<a href="https://mavie03.github.io/shop/privacy/">Privacy</a>. Prices in AUD. Made with care, with help from AI tools.</p></footer></body></html>
