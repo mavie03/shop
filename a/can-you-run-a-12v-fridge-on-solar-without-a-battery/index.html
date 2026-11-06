@@ -1,0 +1,44 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Can You Run a 12V Fridge on Solar Without a Battery? | Malachi Smith</title><meta name="description" content="Can a 12V fridge run straight off a solar panel with no battery? Short answer, why it rarely works, and a worked example of the smallest sensible setup.">
+<link rel="canonical" href="https://mavie03.github.io/shop/a/can-you-run-a-12v-fridge-on-solar-without-a-battery/">
+<style>:root{--bg:#fffaf5;--text:#1f1720;--muted:#6b5f6e;--brand:#ff2e93;--card:#fff;--border:#eadde5}
+@media (prefers-color-scheme:dark){:root{--bg:#120d14;--text:#f6eef8;--muted:#a898b0;--card:#1c151f;--border:#30263a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main,header,footer{max-width:760px;margin:0 auto;padding:16px}header a{color:var(--text);text-decoration:none;font-weight:700}
+a{color:var(--brand)}h1{line-height:1.2}.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin:14px 0}
+.price{font-size:1.4rem;font-weight:700}.buy{display:inline-block;background:var(--brand);color:#fff;padding:12px 22px;border-radius:999px;
+text-decoration:none;font-weight:700}.muted{color:var(--muted)}footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--border);margin-top:32px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}code{background:var(--border);padding:0 4px;border-radius:4px}
+img{max-width:100%;height:auto}.shot{border:1px solid var(--border);border-radius:12px;display:block}figure{margin:14px 0}figcaption{font-size:.9rem}
+a.card{display:block;color:var(--text);text-decoration:none}a.card .thumb{border-radius:10px;margin-bottom:8px;display:block}</style></head><body>
+<header><a href="https://mavie03.github.io/shop/">Malachi Smith</a></header><main><h1>Can You Run a 12V Fridge on Solar Without a Battery?</h1><p><strong>Short answer:</strong> technically sometimes, practically no. A fridge wired straight to a solar panel only runs while the sun is shining, can be damaged by the panel&#x27;s voltage, and leaves your food warming at night and under cloud. A small battery plus a solar controller is the minimum sensible setup, and it doesn&#x27;t have to be big.</p>
+<h3>Why a fridge needs a battery</h3>
+<p>A 12V compressor fridge doesn&#x27;t draw power evenly. It cycles on and off around the clock, and it works hardest on hot afternoons and evenings, when solar is fading. A panel produces power only in daylight, and it swings with cloud, dust, shade and angle.</p>
+<p>| Problem with panel-direct | What happens | |---|---| | No power at night | The fridge relies on insulation alone for roughly half the day | | Cloud or shade | Output drops and the compressor may stall or restart repeatedly | | Panel voltage | A &quot;12V&quot; panel can have an open-circuit voltage well above 12V, which many fridges aren&#x27;t designed to accept | | No controller | Nothing manages the panel&#x27;s voltage or protects the fridge |</p>
+<p>Check your fridge maker&#x27;s manual for its accepted input voltage range. Don&#x27;t connect a panel straight to any appliance unless the maker says it is designed for that.</p>
+<h3>What the smallest sensible setup looks like</h3>
+<p>You need three things: a battery to carry the fridge through the night, a solar charge controller between panel and battery, and a panel big enough to refill the battery each day.</p>
+<h4>Worked example (illustrative assumptions)</h4>
+<p>These are typical values, not specs. They vary by fridge, ambient temperature and how often you open the lid.</p>
+<ul><li>Fridge draws about 40W while running and runs about half the time: 40W × 24h × 0.5 = <strong>480Wh per day</strong>.</li><li>Assume half the running happens when there&#x27;s no sun: about <strong>240Wh</strong> has to come from the battery.</li><li>Assume 4 peak sun hours a day (a cautious figure for a flat panel in a darker month; your location and season will differ).</li><li>Assume 75% overall system efficiency after controller, wiring and dust losses.</li></ul>
+<p><strong>Battery for the overnight share (240Wh):</strong></p>
+<ul><li>Lithium (LiFePO4), 12.8V nominal, 80% usable: 240 ÷ 12.8 = 18.75Ah, then ÷ 0.8 = about <strong>23Ah</strong>.</li><li>AGM, 12V nominal, 50% usable: 240 ÷ 12 = 20Ah, then ÷ 0.5 = <strong>40Ah</strong>.</li></ul>
+<p>Usable depth of discharge varies by maker, so check the datasheet. In practice most people buy bigger than this so the battery isn&#x27;t cycled hard and can ride through a cloudy day.</p>
+<p><strong>Solar to refill a full day (480Wh):</strong></p>
+<ul><li>480 ÷ 4 sun hours = 120W, then ÷ 0.75 = <strong>160W</strong> of panel.</li></ul>
+<p>So on these assumptions, roughly a 160W panel (in practice, a 150–200W panel size), a controller, and a 40Ah-ish battery keeps a fridge going. Change the sun hours and the answer moves a lot: at 2 sun hours (a dull winter stretch), the same maths gives 320W.</p>
+<h3>Don&#x27;t forget the cold-weather and cloud limits</h3>
+<ul><li>Several cloudy days in a row will flatten a small battery. Add capacity, or plan to charge from the vehicle while driving.</li><li>If you choose lithium, charging is limited in cold conditions. Many lithium batteries shouldn&#x27;t be charged near or below freezing unless they have built-in protection or heating. Check the maker&#x27;s spec.</li><li>Some controllers and chargers need a minimum battery or input voltage to start up. Many solar controllers won&#x27;t operate properly without a battery connected, so read the manual.</li></ul>
+<h3>Is there a cheaper alternative?</h3>
+<p>If your fridge runs only on mains or you use an icebox, solar is overkill. But a compressor fridge is the most common big load in a camper, and it&#x27;s the one that sets your battery and solar size. Work out its real daily watt-hours first, then size everything else around it.</p>
+<p>Another option is topping up from the vehicle with a DC-DC charger while driving. That helps on travel days but not at a long camp, so most setups combine both. How much it delivers also depends on your alternator and vehicle wiring.</p>
+<h3>Safety</h3>
+<p>This is general information, not electrical design advice. Cable sizes, fuses and connections matter for fire safety and aren&#x27;t covered here. Have a licensed auto-electrician specify and check the wiring, and use a licensed electrician for anything 240V or mains.</p>
+<h3>Where the 12V Power Plan Kit fits</h3>
+<p>If you&#x27;d rather not do this maths by hand, the <a href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">12V Power Plan Kit</a> (A$24.00) has an offline calculator that takes your fridge, lights, pump and gear plus a region and season, and gives daily watt-hours, battery Ah, solar watts and a DC-DC size. It also includes a buyer guide with a worked 4WD and camper trailer example, and a parts checklist CSV for comparing prices.</p>
+<p>Its limits: it isn&#x27;t personalised, gives no cable sizes or fuse ratings, and sun figures are long-term averages you can overwrite. Free retailer calculators exist too; the kit just puts Australian conditions, an example and a checklist in one place. It has a 30-day money-back guarantee, on top of your Australian Consumer Law rights.</p>
+<h3>Sources</h3>
+<p>No external sources were used for the figures above. The fridge draw, duty cycle, sun hours, efficiency and depth-of-discharge values are illustrative assumptions, so check them against your own fridge and battery datasheets.</p><div class="card"><strong>12V Power Plan Kit for Australian Caravans, Camper Trailers and 4WDs</strong><p class="muted">Work out your battery, solar and DC-DC charger size in minutes, with Australian-conditions notes and a shopping checklist.</p><a class="buy" href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">See it: A$24.00</a></div></main>
+<footer><p>Malachi Smith, Alice Springs, Australia. Questions: <a href="mailto:adminapexinventions@gmail.com">adminapexinventions@gmail.com</a>.
+<a href="https://mavie03.github.io/shop/refunds/">Refunds</a> · <a href="https://mavie03.github.io/shop/terms/">Terms</a> ·
+<a href="https://mavie03.github.io/shop/privacy/">Privacy</a>. Prices in AUD. Made with care, with help from AI tools.</p></footer></body></html>
