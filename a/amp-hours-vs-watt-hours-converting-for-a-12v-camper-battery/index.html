@@ -1,0 +1,45 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amp Hours vs Watt Hours: Converting for a 12V Camper Battery | Malachi Smith</title><meta name="description" content="Amp hours and watt hours confuse every camper buyer. Here&#x27;s the one-line conversion, lithium vs AGM, and a worked example for sizing your battery and solar.">
+<link rel="canonical" href="https://mavie03.github.io/shop/a/amp-hours-vs-watt-hours-converting-for-a-12v-camper-battery/">
+<style>:root{--bg:#fffaf5;--text:#1f1720;--muted:#6b5f6e;--brand:#ff2e93;--card:#fff;--border:#eadde5}
+@media (prefers-color-scheme:dark){:root{--bg:#120d14;--text:#f6eef8;--muted:#a898b0;--card:#1c151f;--border:#30263a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main,header,footer{max-width:760px;margin:0 auto;padding:16px}header a{color:var(--text);text-decoration:none;font-weight:700}
+a{color:var(--brand)}h1{line-height:1.2}.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin:14px 0}
+.price{font-size:1.4rem;font-weight:700}.buy{display:inline-block;background:var(--brand);color:#fff;padding:12px 22px;border-radius:999px;
+text-decoration:none;font-weight:700}.muted{color:var(--muted)}footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--border);margin-top:32px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}code{background:var(--border);padding:0 4px;border-radius:4px}
+img{max-width:100%;height:auto}.shot{border:1px solid var(--border);border-radius:12px;display:block}figure{margin:14px 0}figcaption{font-size:.9rem}
+a.card{display:block;color:var(--text);text-decoration:none}a.card .thumb{border-radius:10px;margin-bottom:8px;display:block}</style></head><body>
+<header><a href="https://mavie03.github.io/shop/">Malachi Smith</a></header><main><h1>Amp Hours vs Watt Hours: Converting for a 12V Camper Battery</h1><p><strong>Short answer:</strong> watt-hours (Wh) = amp-hours (Ah) × volts. A 100Ah lithium (LiFePO4) battery at 12.8V nominal holds about 1,280Wh. A 100Ah AGM at 12V holds about 1,200Wh. But you can only use part of that, so the usable figure is what matters.</p>
+<p>| Battery | Nominal volts | Stored Wh | Usable share (assumed) | Usable Wh | |---|---|---|---|---| | 100Ah lithium | 12.8V | 1,280 | 80% | 1,024 | | 200Ah lithium | 12.8V | 2,560 | 80% | 2,048 | | 100Ah AGM | 12V | 1,200 | 50% | 600 | | 200Ah AGM | 12V | 2,400 | 50% | 1,200 |</p>
+<p>The usable shares of 80% (lithium) and 50% (AGM) are common planning figures, not guarantees. Makers differ, so check your battery&#x27;s datasheet.</p>
+<h3>Why two units exist</h3>
+<p>Amp-hours tell you how much current a battery can supply over time, but only at a given voltage. Watt-hours measure energy directly, so they let you compare a fridge, a laptop and a solar panel on one scale. Panels are sold in watts, loads are often listed in watts, and batteries are sold in amp-hours. Converting everything to Wh makes the sizing simple.</p>
+<h3>The conversions</h3>
+<ul><li><strong>Wh = Ah × V.</strong> 100Ah × 12.8V = 1,280Wh.</li><li><strong>Ah = Wh ÷ V.</strong> 770Wh ÷ 12.8V = about 60Ah.</li><li><strong>Watts = volts × amps.</strong> A fridge drawing 4A at 12V is 48W.</li><li><strong>Wh per day = watts × hours running.</strong> A 60W laptop charger for 2 hours is 120Wh.</li></ul>
+<p>A small trap: a fridge duty-cycles. A compressor fridge rated at 45W doesn&#x27;t run all day, so use a measured or published daily figure if you have one.</p>
+<h3>Worked example (illustrative numbers)</h3>
+<p>These loads are assumptions for a weekend-to-week camper setup. Swap in your own.</p>
+<p>| Load | Calculation | Wh/day | |---|---|---| | Compressor fridge (assumed daily total) | assumed | 600 | | LED lights | 5W × 4h | 20 | | Phone charging | assumed | 20 | | Laptop | 60W × 2h | 120 | | Water pump | 40W × 0.25h | 10 | | <strong>Total</strong> | | <strong>770</strong> |</p>
+<p>Add a 20% margin for losses and cold days: 770 × 1.2 = <strong>924Wh per day</strong>.</p>
+<h4>Battery size</h4>
+<ul><li><strong>Lithium, one day with no sun:</strong> 924 ÷ 0.8 = 1,155Wh usable-adjusted. 1,155 ÷ 12.8 = about 90Ah, so a <strong>100Ah</strong> battery just covers one day.</li><li><strong>Lithium, two days with no sun:</strong> 1,848 ÷ 0.8 = 2,310Wh. 2,310 ÷ 12.8 = about 180Ah, so a <strong>200Ah</strong> battery.</li><li><strong>AGM, one day:</strong> 924 ÷ 0.5 = 1,848Wh. 1,848 ÷ 12 = about 154Ah, so 150 to 200Ah. This is why lithium often looks smaller on paper for the same job.</li></ul>
+<h4>Solar size</h4>
+<p>Using the common rule of solar watts = daily Wh ÷ peak sun hours (PSH):</p>
+<ul><li>At an assumed 4.5 PSH: 924 ÷ 4.5 = about 205W, so <strong>200 to 250W</strong>.</li><li>At an assumed 3 PSH (a dull winter day in the south): 924 ÷ 3 = 308W, so <strong>300W or more</strong>.</li></ul>
+<p>Peak sun hours vary a lot by place and season. Alice Springs in winter and Hobart in winter are very different, and a flat panel in shade gives you far less. Treat the figures as starting points and add margin if you camp in cloud or tree cover.</p>
+<h4>Check the charger side</h4>
+<p>Once you have a battery, check how fast it can be charged. The sum of your DC-DC charger output and your solar current must stay under the battery&#x27;s maximum charge current, which is in the battery&#x27;s specifications. Also note that DC-DC output depends on your alternator and the vehicle wiring, not just the charger&#x27;s label.</p>
+<h3>Common mistakes</h3>
+<ul><li><strong>Comparing a 12V AGM Ah figure to a 12.8V lithium Ah figure as if they were equal.</strong> The 6.7% voltage difference is small, but the usable share difference is large.</li><li><strong>Using Ah for loads and Wh for solar without converting.</strong> Pick one unit, and Wh is easiest.</li><li><strong>Sizing to 100% of the battery.</strong> Leave headroom.</li><li><strong>Forgetting 240V loads.</strong> Running an inverter adds losses, and any mains wiring needs a licensed electrician.</li></ul>
+<h3>Safety note</h3>
+<p>This is general information only. Cable sizes, fuses and the installation need a licensed auto-electrician, and anything 240V needs a licensed electrician.</p>
+<h3>Where the kit fits</h3>
+<p>If you&#x27;d rather not do this by hand, the <a href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">12V Power Plan Kit</a> has an offline calculator that gives daily Wh, battery Ah, solar watts and DC-DC size with margins you can change, plus a buyer guide with a 4WD and camper trailer example and a CSV parts checklist for comparing prices. It is not personalised, it doesn&#x27;t give cable sizes or fuse ratings, and free retailer calculators exist. It costs A$24 and has a 30-day money-back guarantee, on top of your Australian Consumer Law rights.</p>
+<h3>Sources</h3>
+<p>The conversions are standard electrical formulas. The usable-capacity shares, peak sun hours and loads are labelled assumptions, not sourced figures; check your battery datasheet and your own appliance ratings.</p>
+<ul><li>Product page: https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/</li></ul><div class="card"><strong>12V Power Plan Kit for Australian Caravans, Camper Trailers and 4WDs</strong><p class="muted">Work out your battery, solar and DC-DC charger size in minutes, with Australian-conditions notes and a shopping checklist.</p><a class="buy" href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">See it: A$24.00</a></div></main>
+<footer><p>Malachi Smith, Alice Springs, Australia. Questions: <a href="mailto:adminapexinventions@gmail.com">adminapexinventions@gmail.com</a>.
+<a href="https://mavie03.github.io/shop/refunds/">Refunds</a> · <a href="https://mavie03.github.io/shop/terms/">Terms</a> ·
+<a href="https://mavie03.github.io/shop/privacy/">Privacy</a>. Prices in AUD. Made with care, with help from AI tools.</p></footer></body></html>
