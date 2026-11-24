@@ -1,0 +1,48 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>7 Mistakes When Sizing a 12V Camper Power System | Malachi Smith</title><meta name="description" content="The seven most common 12V sizing mistakes for Australian caravans, camper trailers and 4WDs, with a hand-checked worked example and simple fixes.">
+<link rel="canonical" href="https://mavie03.github.io/shop/a/7-mistakes-when-sizing-a-12v-camper-power-system/">
+<style>:root{--bg:#fffaf5;--text:#1f1720;--muted:#6b5f6e;--brand:#ff2e93;--card:#fff;--border:#eadde5}
+@media (prefers-color-scheme:dark){:root{--bg:#120d14;--text:#f6eef8;--muted:#a898b0;--card:#1c151f;--border:#30263a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main,header,footer{max-width:760px;margin:0 auto;padding:16px}header a{color:var(--text);text-decoration:none;font-weight:700}
+a{color:var(--brand)}h1{line-height:1.2}.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin:14px 0}
+.price{font-size:1.4rem;font-weight:700}.buy{display:inline-block;background:var(--brand);color:#fff;padding:12px 22px;border-radius:999px;
+text-decoration:none;font-weight:700}.muted{color:var(--muted)}footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--border);margin-top:32px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}code{background:var(--border);padding:0 4px;border-radius:4px}
+img{max-width:100%;height:auto}.shot{border:1px solid var(--border);border-radius:12px;display:block}figure{margin:14px 0}figcaption{font-size:.9rem}
+a.card{display:block;color:var(--text);text-decoration:none}a.card .thumb{border-radius:10px;margin-bottom:8px;display:block}</style></head><body>
+<header><a href="https://mavie03.github.io/shop/">Malachi Smith</a></header><main><h1>7 Mistakes When Sizing a 12V Camper Power System</h1><p><strong>Short answer:</strong> most oversized, undersized or wasted 12V setups come from the same seven slips: guessing the fridge&#x27;s use, ignoring the darkest month, mixing up Ah and Wh, forgetting losses, buying solar without a plan for cloudy days, relying on one charging source, and treating wiring as an afterthought. Fix those and the sizing itself is simple arithmetic.</p>
+<p>All figures below are <strong>illustrative assumptions</strong>, not measurements of your gear. Swap in your own numbers.</p>
+<h3>The worked example we&#x27;ll use</h3>
+<p>A weekend-to-week tourer with a 4WD and camper trailer:</p>
+<p>| Item | Assumption | Wh per day | |---|---|---| | 12V fridge | about 480 Wh/day in warm weather (check your model&#x27;s data) | 480 | | LED lights | 10 W x 4 h | 40 | | Phones, camera, laptop | allowance | 80 | | Water pump | 40 W x 0.25 h | 10 | | <strong>Total</strong> | | <strong>610</strong> |</p>
+<p>Check: 480 + 40 + 80 + 10 = 610 Wh/day.</p>
+<h3>Mistake 1: Guessing the fridge</h3>
+<p>The fridge is usually the biggest load, and the label wattage is not its daily use. A fridge cycles on and off, and it works harder in a hot car or trailer. Use the manufacturer&#x27;s daily figure if they give one, or measure it with a DC meter over 24 hours. Quoted daily figures vary widely between fridges and conditions, so a measured number beats any rule of thumb.</p>
+<h3>Mistake 2: Sizing for a sunny day, not the worst month</h3>
+<p>Solar sized for January in Darwin won&#x27;t cope with July in Tasmania. Size for the darkest month you&#x27;ll actually camp in. Sun hours also differ a lot across the country: Alice Springs and Hobart are far apart in winter. Long-term averages for a flat panel are a starting point, and real days vary with cloud, dust, shade and tilt.</p>
+<h3>Mistake 3: Mixing up Ah and Wh</h3>
+<p>Batteries are sold in amp hours, appliances are often listed in watts. Convert with Wh = Ah x volts. On a nominal 12V basis:</p>
+<ul><li>610 Wh / 12 V = 50.8 Ah per day.</li></ul>
+<p>If you don&#x27;t convert, a &quot;100Ah&quot; battery sounds like a lot until you realise it&#x27;s roughly 1,200 Wh (100 x 12), and you can&#x27;t use all of it.</p>
+<h3>Mistake 4: Forgetting usable capacity and spare days</h3>
+<p>Decide how many days you want to run with no charging, then allow for the portion of the battery you can safely use. Assuming 2 days and 80% usable (an assumption; check your battery&#x27;s specification):</p>
+<ul><li>50.8 Ah x 2 days = 101.7 Ah</li><li>101.7 / 0.8 = about 127 Ah, so a 150Ah battery is the next sensible size up.</li></ul>
+<p>AGM batteries are normally discharged less deeply than lithium, so they need a bigger rated capacity for the same usable energy.</p>
+<h3>Mistake 5: Solar sized with no loss allowance</h3>
+<p>Panels rarely deliver their rated watts. A common rule of thumb is panel watts = daily Wh / (sun hours x 0.7), where 0.7 allows for losses. With our 610 Wh:</p>
+<p>| Winter sun hours (assumed) | Calculation | Solar needed | |---|---|---| | 4 h | 610 / (4 x 0.7) = 610 / 2.8 | about 218 W | | 3 h | 610 / (3 x 0.7) = 610 / 2.1 | about 290 W | | 5 h | 610 / (5 x 0.7) = 610 / 3.5 | about 174 W |</p>
+<p>The spread is the point: the same trip needs roughly 175 W to 290 W depending on the sun you assume. Round up to the panel sizes that actually fit your roof or blanket, and remember a solar controller must be matched to the panels. Check the controller&#x27;s specifications or ask the retailer.</p>
+<h3>Mistake 6: Relying on one charging source</h3>
+<p>Solar alone struggles under trees and in a run of cloudy days. A DC-DC charger tops up from the vehicle while you drive. As a rough 12V-side estimate, a 20A charger delivers up to 20 A x 12 V = 240 Wh per driving hour, so two hours gives about 480 Wh. That is a ceiling: real output depends on the alternator, the vehicle&#x27;s wiring and battery temperature. If you run both solar and DC-DC, check their combined current against your battery&#x27;s maximum charge rating, which is set by the battery and its BMS (battery management system).</p>
+<h3>Mistake 7: Treating wiring as an afterthought</h3>
+<p>Cable size and fuse rating depend on current, length and installation, and published guides don&#x27;t all agree. Note that a DC-DC charger draws more current on its input side than it delivers, so don&#x27;t size cables from the output figure. This article deliberately gives no cable or fuse sizes. Have a licensed auto-electrician design and check this part, and use a licensed electrician for anything 240V or mains.</p>
+<h3>A quick pre-purchase checklist</h3>
+<ul><li>Measured or manufacturer fridge daily use (Wh).</li><li>Every other load, with watts and hours.</li><li>Darkest month and region you&#x27;ll camp in.</li><li>Days of autonomy you want.</li><li>Battery chemistry and usable percentage.</li><li>Solar watts with losses included, and where they&#x27;ll physically fit.</li><li>DC-DC size and the battery&#x27;s charge-current limit.</li><li>Quotes from an auto-electrician for the install.</li></ul>
+<h3>Where the kit fits</h3>
+<p>If you&#x27;d rather not do this by hand, the <a href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">12V Power Plan Kit</a> (A$24.00) has an offline HTML calculator for daily Wh, battery Ah, solar watts and DC-DC size with adjustable margins, a buyer guide with a 4WD and camper trailer example, and a CSV parts checklist for comparing retailer prices. Its limits: it&#x27;s general information, not personalised, not electrical design, and it gives no cable sizes or fuse ratings. Free retailer calculators exist too; the kit adds Australian conditions, a worked example and the checklist in one place. It has a 30-day money-back guarantee, in addition to your Australian Consumer Law rights.</p>
+<h3>Sources</h3>
+<p>No external figures are cited. The numbers above are the author&#x27;s own illustrative assumptions and arithmetic, using the common 0.7 loss rule of thumb for solar. Check manufacturer specifications for your own gear.</p><div class="card"><strong>12V Power Plan Kit for Australian Caravans, Camper Trailers and 4WDs</strong><p class="muted">Work out your battery, solar and DC-DC charger size in minutes, with Australian-conditions notes and a shopping checklist.</p><a class="buy" href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">See it: A$24.00</a></div></main>
+<footer><p>Malachi Smith, Alice Springs, Australia. Questions: <a href="mailto:adminapexinventions@gmail.com">adminapexinventions@gmail.com</a>.
+<a href="https://mavie03.github.io/shop/refunds/">Refunds</a> · <a href="https://mavie03.github.io/shop/terms/">Terms</a> ·
+<a href="https://mavie03.github.io/shop/privacy/">Privacy</a>. Prices in AUD. Made with care, with help from AI tools.</p></footer></body></html>
