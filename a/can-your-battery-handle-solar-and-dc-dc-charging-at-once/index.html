@@ -1,0 +1,46 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Can Your Battery Handle Solar and DC-DC Charging at Once? | Malachi Smith</title><meta name="description" content="Adding solar and a DC-DC charger to one lithium battery? Here is the simple amps check, with worked examples for 100Ah, 200Ah and 300Ah setups.">
+<link rel="canonical" href="https://mavie03.github.io/shop/a/can-your-battery-handle-solar-and-dc-dc-charging-at-once/">
+<style>:root{--bg:#fffaf5;--text:#1f1720;--muted:#6b5f6e;--brand:#ff2e93;--card:#fff;--border:#eadde5}
+@media (prefers-color-scheme:dark){:root{--bg:#120d14;--text:#f6eef8;--muted:#a898b0;--card:#1c151f;--border:#30263a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main,header,footer{max-width:760px;margin:0 auto;padding:16px}header a{color:var(--text);text-decoration:none;font-weight:700}
+a{color:var(--brand)}h1{line-height:1.2}.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin:14px 0}
+.price{font-size:1.4rem;font-weight:700}.buy{display:inline-block;background:var(--brand);color:#fff;padding:12px 22px;border-radius:999px;
+text-decoration:none;font-weight:700}.muted{color:var(--muted)}footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--border);margin-top:32px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}code{background:var(--border);padding:0 4px;border-radius:4px}
+img{max-width:100%;height:auto}.shot{border:1px solid var(--border);border-radius:12px;display:block}figure{margin:14px 0}figcaption{font-size:.9rem}
+a.card{display:block;color:var(--text);text-decoration:none}a.card .thumb{border-radius:10px;margin-bottom:8px;display:block}</style></head><body>
+<header><a href="https://mavie03.github.io/shop/">Malachi Smith</a></header><main><h1>Can Your Battery Handle Solar and DC-DC Charging at Once?</h1><p><strong>Short answer:</strong> add the amps from your DC-DC charger and your solar controller. That total should sit comfortably below the maximum charge current your battery (and its BMS) allows. On the example setups below it does, but your battery&#x27;s datasheet has the final say.</p>
+<p>This is a check many sizing guides skip. They size the battery, the panels and the DC-DC charger separately, but never ask whether the battery can accept all of them at once.</p>
+<h3>Quick table (illustrative setups)</h3>
+<p>Assumptions: 12V nominal for the amp sums (a conservative choice, because the same watts mean slightly fewer amps at the higher voltage a battery actually charges at). The battery limits are <em>placeholders</em> of roughly half the amp-hour rating per hour (0.5C). That is an assumption for illustration. Your battery may allow more or less, so use the figure from its datasheet.</p>
+<p>| Setup | DC-DC (output) | Solar | Solar amps (W ÷ 12) | Total charge amps | Assumed battery limit | OK? | |---|---|---|---|---|---|---| | 100Ah lithium, weekender | 20A | 200W | 16.7A | 36.7A | 50A | Yes | | 200Ah lithium, regular tourer | 40A | 300W | 25A | 65A | 100A | Yes | | 300Ah lithium, long trips | 40A | 600W | 50A | 90A | 150A | Yes |</p>
+<p>These are not recommendations for your rig. They show how the check works.</p>
+<h3>Step 1: Find your battery&#x27;s maximum charge current</h3>
+<p>Look for &quot;maximum charge current&quot; or &quot;max continuous charge&quot; on the battery&#x27;s datasheet or the manufacturer&#x27;s site. It is set by the cells and the BMS (battery management system). If you can&#x27;t find it, ask the seller before you buy. Don&#x27;t assume.</p>
+<p>Lead-acid and AGM batteries have different charge limits and tend to be charged more gently, so check those separately.</p>
+<h3>Step 2: Work out your solar amps</h3>
+<p>Solar amps into the battery are roughly panel watts ÷ battery volts. For 300W on a 12V system: 300 ÷ 12 = 25A. That is the best case in full sun. Real output is usually lower because of heat, dust, shade and panel angle.</p>
+<h3>Step 3: Add the DC-DC output amps</h3>
+<p>Use the charger&#x27;s rated <em>output</em> (for example 40A), since that is what goes into the battery. In practice, output can be lower than the rating because it depends on your alternator and the vehicle&#x27;s wiring. Some vehicles, particularly those with smart alternators, deliver less.</p>
+<p>Now add the two numbers. For the 200Ah example: 40A + 25A = 65A, against an assumed 100A limit. Fine.</p>
+<h3>Step 4: Check the solar controller is big enough</h3>
+<p>A common rule of thumb for an MPPT controller: panel watts ÷ battery volts × 1.25 gives the minimum controller amp rating. The 1.25 is a safety margin. I haven&#x27;t tied this to a single source, so treat it as a rule of thumb and check the controller manufacturer&#x27;s own limits (including maximum panel voltage).</p>
+<p>| Panels | Calculation | Minimum controller | Next common size up (typical) | |---|---|---|---| | 200W | 200 ÷ 12 × 1.25 = 20.8A | 21A | 25A or 30A | | 300W | 300 ÷ 12 × 1.25 = 31.25A | 32A | 40A | | 600W | 600 ÷ 12 × 1.25 = 62.5A | 63A | 70A or more |</p>
+<p>Note that the <em>controller</em> rating (with margin) is larger than the amps actually flowing. For the battery check in Step 3, use the real expected amps (watts ÷ 12), not the margin-inflated figure.</p>
+<h3>What if the total is over the limit?</h3>
+<p>You have a few options:</p>
+<ul><li>Choose a smaller DC-DC charger (for instance 25A instead of 40A).</li><li>Use fewer panels, or accept that the battery will limit total charging.</li><li>Choose a larger battery with a higher charge limit.</li><li>Check whether the chargers are wired to a battery system that can limit current. Ask a licensed auto-electrician.</li></ul>
+<p>Note that in sunny conditions with the engine running, both sources contribute. Often the battery is fairly full by then and the charger tapers off, but don&#x27;t rely on that for your sizing.</p>
+<h3>Don&#x27;t forget the input side of the DC-DC charger</h3>
+<p>The DC-DC charger draws <em>more</em> current on its input (vehicle) side than it puts out, because it is boosting or converting voltage and it isn&#x27;t 100% efficient. Cable size for the run from the vehicle battery must account for that input current and for voltage drop. Guides disagree on cable sizes for the same charger (different methods and lengths). Cable and fuse sizing is a job for a licensed auto-electrician, not something to copy from a table. Anything involving 240V or mains must be done by a licensed electrician.</p>
+<h3>Does this matter for a small system?</h3>
+<p>For a 100Ah battery with 20A DC-DC and 200W of solar, you are well under most limits. It matters more when you grow: a bigger DC-DC charger, plus a bank of panels on the roof, plus a battery that has only a modest charge rating. That&#x27;s when a quick sum saves you from running a battery at its limit, or from buying parts you can&#x27;t fully use.</p>
+<h3>Where the kit fits</h3>
+<p>This article covers one check. The <a href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">12V Power Plan Kit</a> (A$24) walks through the five numbers (daily watt-hours, battery Ah, solar watts, DC-DC size and more) in an offline HTML calculator, with a worked 4WD and camper trailer example, Australian-conditions notes and a parts checklist CSV for comparing prices. It doesn&#x27;t give cable sizes or fuse ratings, isn&#x27;t electrical design advice, and isn&#x27;t personalised. Free retailer calculators exist too; the kit puts Australian conditions, an example and a checklist in one place. There is a 30-day money-back guarantee, on top of your Australian Consumer Law rights.</p>
+<h3>Sources</h3>
+<p>No external pages were relied on for the figures here. The sums are my own arithmetic from the stated assumptions (12V nominal, placeholder 0.5C battery limits). The MPPT sizing is a general rule of thumb. Confirm every limit against your own battery and controller datasheets, and have a licensed auto-electrician check the installation.</p><div class="card"><strong>12V Power Plan Kit for Australian Caravans, Camper Trailers and 4WDs</strong><p class="muted">Work out your battery, solar and DC-DC charger size in minutes, with Australian-conditions notes and a shopping checklist.</p><a class="buy" href="https://mavie03.github.io/shop/p/12v-power-plan-kit-for-australian-caravans-camper-trailers-a/">See it: A$24.00</a></div></main>
+<footer><p>Malachi Smith, Alice Springs, Australia. Questions: <a href="mailto:adminapexinventions@gmail.com">adminapexinventions@gmail.com</a>.
+<a href="https://mavie03.github.io/shop/refunds/">Refunds</a> · <a href="https://mavie03.github.io/shop/terms/">Terms</a> ·
+<a href="https://mavie03.github.io/shop/privacy/">Privacy</a>. Prices in AUD. Made with care, with help from AI tools.</p></footer></body></html>
